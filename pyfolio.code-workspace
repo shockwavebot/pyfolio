@@ -6,19 +6,28 @@
 	],
 	"settings": {
 		"editor.formatOnSave": true,
-		"editor.tabSize": 4,
 		"editor.rulers": [
 			135
 		],
+		"editor.tabSize": 4,
 		"[python]": {
 			"editor.formatOnSave": true,
 			"editor.defaultFormatter": "ms-python.autopep8",
 			"editor.codeActionsOnSave": {
-				"source.fixAll": "always",
-				"source.organizeImports": "always"
+				"source.organizeImports": "always",
+				"source.fixAll": "always"
 			},
 		},
 		"python.defaultInterpreterPath": ".venv/bin/python",
 		"cSpell.enabled": false,
+		"flake8.args": [
+			"--max-line-length",
+			"135"
+		],
+		"python.testing.pytestArgs": [
+			"."
+		],
+		"python.testing.unittestEnabled": false,
+		"python.testing.pytestEnabled": true,
 	}
 }
