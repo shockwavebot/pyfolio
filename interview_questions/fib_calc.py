@@ -8,7 +8,7 @@ def fib_calc(n):
 
 print(fib_calc(10)) # 55
 print(fib_calc(30)) # 832040
-print(fib_calc(37)) # 24157817 😱 24 mil !!!
+print(fib_calc(37)) # 24157817 😱 24 min !!!
 print(fib_calc(50)) # couldn't calculate
 
 # with dynamic programming
