@@ -23,14 +23,14 @@ def producer(id: str, slot_sem: Semaphore, item_sem: Semaphore,buf: Queue):
 def consumer(id: str, slot_sem: Semaphore,item_sem: Semaphore, buf: Queue):
     while True:
         print(f"[Consumer {id}]: Waiting for slot")
-        item_sem.acquire() 
+        item_sem.acquire() # Wait for available items
         print(f"[Consumer {id}]: Item signal ackquired")
         with MUTEX:
             item = buf.get()
             print(f"[Consumer {id}]: Consuming item: {item}")
         rnd = round(random.uniform(0.01, 0.1), 3)
         sleep(rnd)
-        slot_sem.release()
+        slot_sem.release() # Signal that space is available
 
 if __name__ == "__main__":
     print("Consumer-Producer example with Threading module Semaphore")
