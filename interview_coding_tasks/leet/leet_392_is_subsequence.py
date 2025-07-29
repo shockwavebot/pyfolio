@@ -29,3 +29,4 @@ def is_subseq(s:str, t:str) -> bool:
 if __name__ == '__main__':
     assert is_subseq("abc", "ahbgdc")
     assert not is_subseq("axc", "ahbgdc")
+    assert is_subseq("", "ahbgdc")

@@ -7,7 +7,7 @@ def critical_section(thread_id):
     print(f"Thread {thread_id} is waiting for the mutex...")
     with mutex:
         print(f"Thread {thread_id} has acquired the mutex.")
-        time.sleep(1)  # Simulate critical section
+        time.sleep(0.1)  # Simulate critical section
         print(f"Thread {thread_id} is releasing the mutex.")
 
 threads = []
